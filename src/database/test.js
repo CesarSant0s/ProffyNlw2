@@ -32,7 +32,25 @@ Database.then( async (db)=> {
     ]
 
     // query entered data
-    //await createProffy(db, {proffyValue,classValue,classScheduleValues})
+    // await createProffy(db, {proffyValue,classValue,classScheduleValues})
     
-    
+    // query all proffys
+    // const  selectedProffys = await db.all("SELECT * FROM proffys")
+    // console.log(selectedProffys)
+
+    // query class from a proffy with his data 
+    const selectClassesAndProffys = await db.all(`
+        SELECT classes.*, proffys.*
+        FROM proffys
+        JOIN classes ON (classes.proffy_id = proffys.id)
+        WHERE classes.proffy_id = 1;
+    `)
+    // console.log(selectClassesAndProffys)
+
+    const selectClassesSchedules = await db.all(`
+        
+    `)
+
+    console.log(selectClassesSchedules)
+
 })
