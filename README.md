@@ -1,7 +1,7 @@
 # ProffyNlw2
 Project developed during NextLevelWeek2 promoted by Rocketseat.
 
-#To fix and inplement
+# To fix and inplement
 - Show sucess registratio page
 - wait 2 seconds to redirect to study page
     - use setTimeout wait 
